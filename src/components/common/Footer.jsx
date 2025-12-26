@@ -18,7 +18,7 @@ const Footer = () => {
           <Grid item xs={12} sm={6} md={4} lg={3}>
             <Box
               component="img"
-              src="/assets/images/logo-hope.webp"
+              src="assets/images/logo-hope.webp"
               alt="The Hope Hospital Logo"
               sx={{ height: 50, mb: 2, filter: 'brightness(1.2)' }}
             />

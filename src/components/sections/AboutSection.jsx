@@ -35,7 +35,7 @@ const AboutSection = () => {
                         >
                             <Box
                                 component="img"
-                                src="/assets/images/hospitalfrontbuildingphoto.webp"
+                                src="assets/images/hospitalfrontbuildingphoto.webp"
                                 alt="The Hope Hospital Building"
                                 sx={{
                                     width: '100%',

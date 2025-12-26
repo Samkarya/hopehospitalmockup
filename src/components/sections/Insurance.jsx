@@ -13,8 +13,8 @@ const insurancePartners = [
 ];
 
 const governmentSchemes = [
-    { name: 'PM-JAY', logo: '/assets/images/PMKY-FINAL-LOGO-250-x-80-px-1.webp' },
-    { name: 'CGHS', logo: '/assets/images/CGHS-FINAL-LOGO-250-x-80-px.webp' },
+    { name: 'PM-JAY', logo: 'assets/images/PMKY-FINAL-LOGO-250-x-80-px-1.webp' },
+    { name: 'CGHS', logo: 'assets/images/CGHS-FINAL-LOGO-250-x-80-px.webp' },
 ];
 
 const Insurance = () => {

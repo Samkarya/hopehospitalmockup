@@ -21,13 +21,13 @@ const doctors = [
     name: 'Dr. Rahul Mavi',
     degrees: 'MBBS, MD',
     specialty: 'General Physician',
-    img: '/assets/images/hopeteamDr_Rahul_Mavi.webp'
+    img: 'assets/images/hopeteamDr_Rahul_Mavi.webp'
   },
   {
     name: 'Dr. Suddhatam Jain',
     degrees: 'MBBS, DNB',
     specialty: 'Laparoscopic Surgeon',
-    img: '/assets/images/hopeteam_dr-shuddhatam-jain-general-and-laparoscopic-surgery-in-noida.webp'
+    img: 'assets/images/hopeteam_dr-shuddhatam-jain-general-and-laparoscopic-surgery-in-noida.webp'
   },
   {
     name: 'Dr. Parag Agarwal',

@@ -78,7 +78,7 @@ const Header = (props) => {
       >
         <Box
           component="img"
-          src="/assets/images/logo-hope.webp"
+          src="assets/images/logo-hope.webp"
           alt="The Hope Hospital Logo"
           sx={{ height: 40 }}
         />
@@ -204,7 +204,7 @@ const Header = (props) => {
                 <Box component="a" href="/" sx={{ display: 'flex', alignItems: 'center' }}>
                   <Box
                     component="img"
-                    src="/assets/images/logo-hope.webp"
+                    src="assets/images/logo-hope.webp"
                     alt="The Hope Hospital"
                     sx={{ height: { xs: 36, md: 48 }, width: 'auto' }}
                   />

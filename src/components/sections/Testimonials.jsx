@@ -30,28 +30,28 @@ const photoStories = [
     title: "Walking Tall After 10 Years",
     patient: "Jitendra Kumar",
     desc: "After suffering for a decade, Jitendra Kumar is finally able to walk again thanks to Dr. Vinoy Upadhyay's expertise. A true new life!",
-    image: "/assets/images/jitenderkumarPaitinetwithsuccessfullkneeoperation.webp",
+    image: "assets/images/jitenderkumarPaitinetwithsuccessfullkneeoperation.webp",
     category: "Orthopedics"
   },
   {
     title: "Gift of Motherhood",
     patient: "Happy Mother",
     desc: "Experience the joy of normal delivery. 'The care at Hope Hospital made my journey to motherhood safe and memorable.'",
-    image: "/assets/images/patienttestimonialSuccessfuldilivery.webp",
+    image: "assets/images/patienttestimonialSuccessfuldilivery.webp",
     category: "Gynecology"
   },
   {
     title: "Beating Critical Dengue",
     patient: "Recovered Patient",
     desc: "Recovered from a complex case of Dengue with dropped platelets. Dr. Rahul Mavi and the team provided 24/7 monitoring.",
-    image: "/assets/images/patientestimoainaldenguesurviver.webp",
+    image: "assets/images/patientestimoainaldenguesurviver.webp",
     category: "General Medicine"
   },
   {
     title: "Critical Appendix Surgery",
     patient: "Emergency Patient",
     desc: "Ruptured Appendix operation performed successfully. 'The emergency response was instant, saving my life.'",
-    image: "/assets/images/morepatienttestimonial.webp",
+    image: "assets/images/morepatienttestimonial.webp",
     category: "Surgery"
   }
 ];

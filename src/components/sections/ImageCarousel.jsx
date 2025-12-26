@@ -9,14 +9,14 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 const carouselImages = [
-    { src: '/assets/images/heroscroll0.webp', alt: 'Hospital Facility 1' },
-    { src: '/assets/images/heroscrool1.webp', alt: 'Hospital Facility 2' },
-    { src: '/assets/images/heroscroll3.webp', alt: 'Hospital Facility 3' },
-    { src: '/assets/images/heroscroll4.webp', alt: 'Hospital Facility 4' },
-    { src: '/assets/images/heroscroll5.webp', alt: 'Hospital Facility 5' },
-    { src: '/assets/images/heroscroll7.webp', alt: 'Hospital Facility 6' },
-    { src: '/assets/images/heroscroll8.webp', alt: 'Hospital Facility 7' },
-    { src: '/assets/images/heroscroll9.webp', alt: 'Hospital Facility 8' },
+    { src: 'assets/images/heroscroll0.webp', alt: 'Hospital Facility 1' },
+    { src: 'assets/images/heroscrool1.webp', alt: 'Hospital Facility 2' },
+    { src: 'assets/images/heroscroll3.webp', alt: 'Hospital Facility 3' },
+    { src: 'assets/images/heroscroll4.webp', alt: 'Hospital Facility 4' },
+    { src: 'assets/images/heroscroll5.webp', alt: 'Hospital Facility 5' },
+    { src: 'assets/images/heroscroll7.webp', alt: 'Hospital Facility 6' },
+    { src: 'assets/images/heroscroll8.webp', alt: 'Hospital Facility 7' },
+    { src: 'assets/images/heroscroll9.webp', alt: 'Hospital Facility 8' },
 ];
 
 const ImageCarousel = () => {

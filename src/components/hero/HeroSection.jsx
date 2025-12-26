@@ -143,18 +143,18 @@ const HeroSection = () => {
 
             {/* RIGHT CONTENT */}
             <Grid item xs={12} md={6} sx={{
-                  width: { xs: '85%', sm: '70%', md: '100%' },
-                  maxWidth: 500,
-                  mx: 'auto',
-                  display: 'flex',
-                  justifyContent: 'center'
-                }}>
-                <Box
-                  component="img"
-                  src="/assets/images/drviayupadhyay.webp"
-                  alt="Dr. Vinay Upadhyay"
-                  sx={{width: '100%',filter: 'drop-shadow(0 10px 30px rgba(0,0,0,0.3))',}}
-                />
+              width: { xs: '85%', sm: '70%', md: '100%' },
+              maxWidth: 500,
+              mx: 'auto',
+              display: 'flex',
+              justifyContent: 'center'
+            }}>
+              <Box
+                component="img"
+                src="assets/images/drviayupadhyay.webp"
+                alt="Dr. Vinay Upadhyay"
+                sx={{ width: '100%', filter: 'drop-shadow(0 10px 30px rgba(0,0,0,0.3))', }}
+              />
             </Grid>
 
           </Grid>
@@ -165,9 +165,9 @@ const HeroSection = () => {
       <Container maxWidth="lg" sx={{ mt: { xs: 4, md: -2 }, mb: 4 }}>
         <Grid container spacing={2} justifyContent="center">
           {[
-            { src: '/assets/images/PMKY-FINAL-LOGO-250-x-80-px-1.webp' },
-            { src: '/assets/images/CGHS-FINAL-LOGO-250-x-80-px.webp' },
-            { src: '/assets/images/NABH-150-x-100-px.webp' }
+            { src: 'assets/images/PMKY-FINAL-LOGO-250-x-80-px-1.webp' },
+            { src: 'assets/images/CGHS-FINAL-LOGO-250-x-80-px.webp' },
+            { src: 'assets/images/NABH-150-x-100-px.webp' }
           ].map((item, i) => (
             <Grid item xs={6} sm={3} key={i}>
               <Box

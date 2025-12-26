@@ -9,56 +9,56 @@ const doctors = [
     degrees: 'MBBS, MS (Ortho)',
     specialty: 'Sr. Orthopedic Surgeon',
     role: 'Chairman & Director',
-    img: 'https://via.placeholder.com/300x300?text=Dr.+Vinoy' // Replace with dr_vinoy.jpg
+    img: 'https://thehopehospital.org/wp-content/uploads/2024/09/download.png' // Replace with dr_vinoy.jpg
   },
   {
     name: 'Dr. Madhavi Rawat',
     degrees: 'MBBS, MD',
     specialty: 'Gynecologist',
     role: 'Senior Consultant',
-    img: 'https://via.placeholder.com/300x300?text=Dr.+Madhavi' // Replace with dr_madhavi.jpg
+    img: 'https://thehopehospital.org/wp-content/uploads/2024/09/hope-hospital-team.png' // Replace with dr_madhavi.jpg
   },
   {
     name: 'Dr. Rahul Mavi',
     degrees: 'MBBS, MD',
     specialty: 'General Physician',
     role: 'Consultant',
-    img: 'https://via.placeholder.com/300x300?text=Dr.+Rahul'
+    img: '/assets/images/hopeteamDr_Rahul_Mavi.webp'
   },
   {
     name: 'Dr. Suddhatam Jain',
     degrees: 'MBBS, DNB',
     specialty: 'Laparoscopic Surgeon',
     role: 'Senior Surgeon',
-    img: 'https://via.placeholder.com/300x300?text=Dr.+Suddhatam'
+    img: '/assets/images/hopeteam_dr-shuddhatam-jain-general-and-laparoscopic-surgery-in-noida.webp'
   },
   {
     name: 'Dr. Parag Agarwal',
     degrees: 'MBBS, MD',
     specialty: 'Sr. Physician',
     role: 'Internal Medicine',
-    img: 'https://via.placeholder.com/300x300?text=Dr.+Parag'
+    img: 'https://thehopehospital.org/wp-content/uploads/2024/09/dr._parag_agarwal-removebg-preview.png'
   },
   {
-    name: 'Dr. Rohit Pandey',
-    degrees: 'MBBS, MS, MCh',
+    name: 'Dr. Tarun Gupta',
+    degrees: 'MBBS, MD',
     specialty: 'Neurosurgeon',
     role: 'Brain & Spine Expert',
-    img: 'https://via.placeholder.com/300x300?text=Dr.+Rohit'
+    img: 'https://thehopehospital.org/wp-content/uploads/2024/09/tarun-gupta-300x300.jpg'
   },
   {
-    name: 'Dr. J.N. Jha',
-    degrees: 'MBBS, MD, DM',
-    specialty: 'Cardiologist',
-    role: 'Heart Specialist',
-    img: 'https://via.placeholder.com/300x300?text=Dr.+Jha'
+    name: 'Dr. Deepak Rathore',
+    degrees: 'MBBS, MS, MCH',
+    specialty: 'Plastic & Cardio Surgeon',
+    role: 'Senior Surgeon',
+    img: 'https://thehopehospital.org/wp-content/uploads/2024/09/Dr_Deepak-removebg-preview.png'
   },
   {
-    name: 'Dr. Prateek Rastogi',
-    degrees: 'MBBS, MS (Ortho)',
-    specialty: 'Pediatric Orthopedic',
-    role: 'Consultant',
-    img: 'https://via.placeholder.com/300x300?text=Dr.+Prateek'
+    name: 'Dr. Viviek Pathak',
+    degrees: 'MBBS, MS (ENT)',
+    specialty: 'ENT Surgeon',
+    role: 'Senior Surgeon',
+    img: 'https://thehopehospital.org/wp-content/uploads/2024/09/Dr_Vivek_Pathak-removebg-preview.png'
   },
 ];
 
@@ -66,18 +66,18 @@ const Doctors = () => {
   return (
     <Box id="doctors" sx={{ py: 8, bgcolor: 'background.default' }}>
       <Container maxWidth="lg">
-        <SectionTitle 
-          title="Our Medical Experts" 
-          subtitle="Meet The Team" 
+        <SectionTitle
+          title="Our Medical Experts"
+          subtitle="Meet The Team"
         />
-        
+
         <Grid container spacing={4}>
           {doctors.map((doc, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
-              <Card 
-                sx={{ 
-                  height: '100%', 
-                  display: 'flex', 
+              <Card
+                sx={{
+                  height: '100%',
+                  display: 'flex',
                   flexDirection: 'column',
                   position: 'relative',
                   overflow: 'visible',
@@ -105,30 +105,30 @@ const Doctors = () => {
                     }}
                   />
                 </Box>
-                
+
                 <CardContent sx={{ flexGrow: 1, textAlign: 'center', pt: 2 }}>
                   <Typography variant="h6" component="div" sx={{ fontWeight: 700, color: 'primary.dark' }}>
                     {doc.name}
                   </Typography>
-                  
+
                   {/* Degrees are important in India for trust */}
                   <Typography variant="caption" display="block" sx={{ color: 'text.secondary', mb: 1, fontWeight: 500 }}>
                     {doc.degrees}
                   </Typography>
 
-                  <Chip 
-                    label={doc.specialty} 
-                    size="small" 
-                    sx={{ 
-                      bgcolor: 'secondary.light', 
-                      color: 'primary.dark', 
+                  <Chip
+                    label={doc.specialty}
+                    size="small"
+                    sx={{
+                      bgcolor: 'secondary.light',
+                      color: 'primary.dark',
                       fontWeight: 600,
-                      mb: 2 
-                    }} 
+                      mb: 2
+                    }}
                   />
-                  
+
                   <Box mt="auto">
-                    <Button variant="outlined" color="primary" fullWidth size="small">
+                    <Button variant="outlined" color="secondary" fullWidth size="small">
                       Book Appointment
                     </Button>
                   </Box>
@@ -139,9 +139,9 @@ const Doctors = () => {
         </Grid>
 
         <Box sx={{ textAlign: 'center', mt: 6 }}>
-            <Button variant="contained" size="large" color="primary">
-                View All Doctors
-            </Button>
+          <Button variant="contained" size="large" color="primary">
+            View All Doctors
+          </Button>
         </Box>
       </Container>
     </Box>

@@ -13,6 +13,7 @@ import Excellence from './components/sections/Excellence';
 import Doctors from './components/sections/Doctors';
 import Stats from './components/sections/Stats';
 import WhyChooseUs from './components/sections/WhyChooseUs';
+import Testimonials from './components/sections/Testimonials';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
           <Stats /> {/* Breaks up the white space */}
           
           <Doctors />
-          
+          <Testimonials />
           <WhyChooseUs />
           
           {/* Add Testimonials Section Here in future */}

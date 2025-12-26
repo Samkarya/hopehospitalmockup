@@ -19,17 +19,17 @@ const Stats = () => {
         <Grid container spacing={4} justifyContent="center">
           {statsData.map((stat, index) => (
             <Grid item xs={6} md={3} key={index} sx={{ textAlign: 'center' }}>
-              <Box 
-                sx={{ 
-                  display: 'flex', 
-                  justifyContent: 'center', 
-                  mb: 1, 
-                  opacity: 0.8 
+              <Box
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  mb: 1,
+                  opacity: 0.8
                 }}
               >
                 {stat.icon}
               </Box>
-              <Typography variant="h3" fontWeight="bold" sx={{ fontSize: { xs: '2rem', md: '3rem' } }}>
+              <Typography variant="h3" fontWeight="bold" sx={{ fontSize: { xs: '2rem', md: '3rem' }, color: 'white' }}>
                 {stat.number}
               </Typography>
               <Typography variant="body1" sx={{ fontWeight: 500, opacity: 0.9 }}>

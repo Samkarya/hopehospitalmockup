@@ -54,9 +54,12 @@ const Header = (props) => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', pt: 2 }}>
-      <Typography variant="h6" sx={{ my: 2, color: 'primary.main', fontWeight: 'bold' }}>
-        THE HOPE HOSPITAL
-      </Typography>
+      <Box
+        component="img"
+        src="/assets/images/logo-hope.webp"
+        alt="The Hope Hospital Logo"
+        sx={{ height: 50, my: 2, mx: 'auto', display: 'block' }}
+      />
       <List>
         {navLinks.map((item) => (
           <ListItem button key={item.name} component="a" href={item.href}>
@@ -64,9 +67,9 @@ const Header = (props) => {
           </ListItem>
         ))}
         <ListItem>
-            <Button fullWidth variant="contained" color="warning">
-                Book Appointment
-            </Button>
+          <Button fullWidth variant="contained" color="secondary">
+            Book Appointment
+          </Button>
         </ListItem>
       </List>
     </Box>
@@ -75,36 +78,36 @@ const Header = (props) => {
   return (
     <>
       {/* 1. Emergency Top Strip */}
-      <Box sx={{ 
-        bgcolor: 'primary.dark', 
-        color: 'white', 
-        py: 0.5, 
+      <Box sx={{
+        bgcolor: 'primary.dark',
+        color: 'white',
+        py: 0.8,
         textAlign: 'center',
         fontSize: '0.85rem'
       }}>
         <Container maxWidth="lg">
-          <Stack 
-            direction={{ xs: 'column', sm: 'row' }} 
-            justifyContent="space-between" 
+          <Stack
+            direction={{ xs: 'column', sm: 'row' }}
+            justifyContent="space-between"
             alignItems="center"
             spacing={1}
           >
             <Box display="flex" alignItems="center" gap={1}>
-                <LocalHospitalIcon fontSize="small" color="error" />
-                <Typography variant="caption" fontWeight="bold">
-                   Emergency (24/7): +91-9667792126
-                </Typography>
+              <LocalHospitalIcon fontSize="small" color="error" />
+              <Typography variant="caption" fontWeight="bold">
+                Emergency (24/7): +91-9667792126
+              </Typography>
             </Box>
             <Box display={{ xs: 'none', md: 'flex' }} alignItems="center" gap={2}>
-                 <Typography variant="caption" display="flex" alignItems="center" gap={0.5}>
-                    <LocationOnIcon fontSize="inherit" /> Delta II, Greater Noida
-                 </Typography>
-                 <Typography variant="caption" sx={{ bgcolor: 'secondary.main', color: 'primary.dark', px: 1, borderRadius: 1 }}>
-                    NABH Accredited
-                 </Typography>
-                 <Typography variant="caption" sx={{ bgcolor: 'white', color: 'primary.main', px: 1, borderRadius: 1 }}>
-                    CGHS Empanelled
-                 </Typography>
+              <Typography variant="caption" display="flex" alignItems="center" gap={0.5}>
+                <LocationOnIcon fontSize="inherit" /> Delta II, Greater Noida
+              </Typography>
+              <Typography variant="caption" sx={{ bgcolor: 'secondary.main', color: 'primary.dark', px: 1, borderRadius: 1 }}>
+                NABH Accredited
+              </Typography>
+              <Typography variant="caption" sx={{ bgcolor: 'white', color: 'primary.main', px: 1, borderRadius: 1 }}>
+                CGHS Empanelled
+              </Typography>
             </Box>
           </Stack>
         </Container>
@@ -115,7 +118,7 @@ const Header = (props) => {
         <AppBar position="sticky" color="inherit">
           <Container maxWidth="lg">
             <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-              
+
               {/* Logo Area */}
               <Box display="flex" alignItems="center">
                 <IconButton
@@ -127,25 +130,21 @@ const Header = (props) => {
                 >
                   <MenuIcon color="primary" />
                 </IconButton>
-                <Box>
-                     {/* Text Logo for accessibility/placeholder */}
-                    <Typography variant="h5" component="div" sx={{ 
-                        fontWeight: 800, 
-                        color: 'primary.main', 
-                        lineHeight: 1,
-                        display: 'flex',
-                        flexDirection: 'column'
-                    }}>
-                        THE HOPE <Typography component="span" variant="caption" sx={{ letterSpacing: 1.5, color: 'secondary.main' }}>HOSPITAL</Typography>
-                    </Typography>
+                <Box component="a" href="/" sx={{ display: 'flex', alignItems: 'center' }}>
+                  <Box
+                    component="img"
+                    src="/assets/images/logo-hope.webp"
+                    alt="The Hope Hospital"
+                    sx={{ height: { xs: 40, md: 50 }, width: 'auto' }}
+                  />
                 </Box>
               </Box>
 
               {/* Desktop Menu */}
               <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 3, alignItems: 'center' }}>
                 {navLinks.map((item) => (
-                  <Button 
-                    key={item.name} 
+                  <Button
+                    key={item.name}
                     href={item.href}
                     sx={{ color: 'text.primary', fontWeight: 500, '&:hover': { color: 'primary.main' } }}
                   >
@@ -156,19 +155,19 @@ const Header = (props) => {
 
               {/* CTA Button */}
               <Box sx={{ display: 'flex', gap: 1 }}>
-                 {/* Mobile Call Icon */}
-                <IconButton 
-                    sx={{ display: { xs: 'flex', md: 'none' }, bgcolor: 'primary.light', color: 'white' }} 
-                    href="tel:+919667792126"
+                {/* Mobile Call Icon */}
+                <IconButton
+                  sx={{ display: { xs: 'flex', md: 'none' }, bgcolor: 'primary.light', color: 'white' }}
+                  href="tel:+919667792126"
                 >
-                    <PhoneInTalkIcon fontSize="small" />
+                  <PhoneInTalkIcon fontSize="small" />
                 </IconButton>
-                
-                <Button 
-                    variant="contained" 
-                    color="warning" 
-                    startIcon={<LocalHospitalIcon />}
-                    sx={{ display: { xs: 'none', sm: 'flex' } }}
+
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  startIcon={<LocalHospitalIcon />}
+                  sx={{ display: { xs: 'none', sm: 'flex' } }}
                 >
                   Book Appointment
                 </Button>

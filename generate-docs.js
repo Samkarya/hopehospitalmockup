@@ -15,7 +15,7 @@ const CONFIG = {
     '.js', '.jsx', '.ts', '.tsx', '.css', '.scss', 
     '.json', '.html', '.rules', '.md', '.env'
   ]
-};
+}; 
 
 let markdownContent = `# Project Documentation: Examify\n\nGenerated on: ${new Date().toLocaleString()}\n\n`;
 

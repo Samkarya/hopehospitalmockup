@@ -92,26 +92,17 @@ const HeroSection = () => {
               </Stack>
             </Grid>
 
-            {/* Right Content - Doctor Image + Floating Card */}
-            <Grid item xs={12} md={6} sx={{ 
-              display: 'flex', 
-              // Fix Mobile Centering (center) vs Desktop (flex-end)
-              justifyContent: { xs: 'center', md: 'flex-end' }, 
-              alignItems: 'flex-end', 
-              position: 'relative',
-              mt: { xs: 5, md: 0 } // Add spacing on mobile so he isn't too close to buttons
-            }}>
+            {/* Right Content - Doctor Image*/}
+            <Grid item xs={12} md={6}>
               
               {/* Doctor Image */}
               <Box
                 sx={{
                   position: 'relative',
-                  width: { xs: '85%', sm: '70%', md: '90%' }, // Increased width
-                  maxWidth: 500, // Increased size so he doesn't look small/buried
+                  width: { xs: '85%', sm: '70%', md: '100%' }, 
+                  maxWidth: 500, 
                   zIndex: 2,
-                  // FIX 1: Push image left on Large screens to make room for card
                   mr: { s: 'auto', lg: 28 }, 
-                  // FIX 2: Center image on Mobile
                   ml: { s: 'auto', lg: 0 },
                   display: 'block'
                 }}
@@ -128,20 +119,6 @@ const HeroSection = () => {
                   }}
                 />
               </Box>
-
-              {/* FLOATING BOOKING CARD (Large Screens Only) */}
-              <Box sx={{
-                display: { xs: 'none', lg: 'block' },
-                position: 'absolute',
-                // FIX 3: Lift the card up so it's not aligned with the bottom edge
-                bottom: 0, 
-                // FIX 4: Anchor to right edge (Doctor is now pushed left, so no overlap)
-                right: -100, 
-                zIndex: 3
-              }}>
-                <BookingCard variant='floating'/>
-              </Box>
-
             </Grid>
 
           </Grid>
@@ -166,8 +143,7 @@ const HeroSection = () => {
       </Container>
 
       {/* MOBILE STANDALONE CARD (Small Screens Only) */}
-      <Container maxWidth="sm" sx={{ 
-        display: { xs: 'block', lg: 'none' }, // <--- VISIBLE on xs/sm/md, HIDDEN on lg+
+      <Container maxWidth="sm" sx={{
         pb: 4 
       }}>
         <BookingCard variant='standalone'/>

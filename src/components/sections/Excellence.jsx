@@ -30,22 +30,21 @@ const Excellence = () => {
           subtitle="Comprehensive Care"
         />
 
-        <Grid container spacing={{ xs: 2, sm: 3, md: 4 }}>
+        <Grid container spacing={{ xs: 2, sm: 3 }} alignItems="stretch">
           {specialties.map((item, index) => (
-            <Grid item xs={6} sm={4} md={3} key={index} sx={{ display: 'flex' }}>
+            <Grid item xs={6} sm={6} md={3} key={index}>
               <Paper
                 elevation={0}
                 sx={{
-                  p: { xs: 2, sm: 3 },
+                  p: 3,
                   textAlign: 'center',
                   border: '1px solid',
                   borderColor: 'divider',
                   borderRadius: 3,
-                  height: '100%',
+                  height: '100%', // Forces equal height
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
-                  justifyContent: 'flex-start',
                   transition: 'all 0.3s ease',
                   '&:hover': {
                     transform: 'translateY(-5px)',
@@ -54,7 +53,6 @@ const Excellence = () => {
                     '& .icon-box': {
                       bgcolor: 'primary.main',
                       color: 'white',
-                      transform: 'scale(1.1)',
                     }
                   }
                 }}
@@ -62,19 +60,16 @@ const Excellence = () => {
                 <Box
                   className="icon-box"
                   sx={{
-                    width: { xs: 50, sm: 60 },
-                    height: { xs: 50, sm: 60 },
+                    width: 70,
+                    height: 70,
                     bgcolor: 'primary.light',
                     color: 'primary.dark',
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    mb: { xs: 1.5, sm: 2 },
+                    mb: 2,
                     transition: 'all 0.3s ease',
-                    '& svg': {
-                      fontSize: { xs: '1.5rem', sm: '1.75rem' }
-                    }
                   }}
                 >
                   {item.icon}
@@ -83,17 +78,18 @@ const Excellence = () => {
                   variant="subtitle1"
                   gutterBottom
                   sx={{
-                    fontWeight: 600,
-                    fontSize: { xs: '0.85rem', sm: '0.95rem', md: '1rem' },
-                    lineHeight: 1.3
+                    fontWeight: 700,
+                    color: 'text.primary',
+                    lineHeight: 1.2,
+                    mb: 1
                   }}
                 >
                   {item.title}
                 </Typography>
                 <Typography
-                  variant="caption"
+                  variant="body2"
                   color="text.secondary"
-                  sx={{ fontSize: { xs: '0.7rem', sm: '0.75rem' } }}
+                  sx={{ fontSize: '0.8rem', lineHeight: 1.4 }}
                 >
                   {item.desc}
                 </Typography>

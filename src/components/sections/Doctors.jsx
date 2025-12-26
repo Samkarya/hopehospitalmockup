@@ -9,56 +9,48 @@ const doctors = [
     name: 'Dr. Vinoy Upadhyay',
     degrees: 'MBBS, MS (Ortho)',
     specialty: 'Sr. Orthopedic Surgeon',
-    role: 'Chairman & Director',
     img: 'https://thehopehospital.org/wp-content/uploads/2024/09/download.png'
   },
   {
     name: 'Dr. Madhavi Rawat',
     degrees: 'MBBS, MD',
     specialty: 'Gynecologist',
-    role: 'Senior Consultant',
     img: 'https://thehopehospital.org/wp-content/uploads/2024/09/hope-hospital-team.png'
   },
   {
     name: 'Dr. Rahul Mavi',
     degrees: 'MBBS, MD',
     specialty: 'General Physician',
-    role: 'Consultant',
     img: '/assets/images/hopeteamDr_Rahul_Mavi.webp'
   },
   {
     name: 'Dr. Suddhatam Jain',
     degrees: 'MBBS, DNB',
     specialty: 'Laparoscopic Surgeon',
-    role: 'Senior Surgeon',
     img: '/assets/images/hopeteam_dr-shuddhatam-jain-general-and-laparoscopic-surgery-in-noida.webp'
   },
   {
     name: 'Dr. Parag Agarwal',
     degrees: 'MBBS, MD',
     specialty: 'Sr. Physician',
-    role: 'Internal Medicine',
     img: 'https://thehopehospital.org/wp-content/uploads/2024/09/dr._parag_agarwal-removebg-preview.png'
   },
   {
     name: 'Dr. Tarun Gupta',
     degrees: 'MBBS, MD',
     specialty: 'Neurosurgeon',
-    role: 'Brain & Spine Expert',
     img: 'https://thehopehospital.org/wp-content/uploads/2024/09/tarun-gupta-300x300.jpg'
   },
   {
     name: 'Dr. Deepak Rathore',
     degrees: 'MBBS, MS, MCH',
     specialty: 'Plastic & Cardio Surgeon',
-    role: 'Senior Surgeon',
     img: 'https://thehopehospital.org/wp-content/uploads/2024/09/Dr_Deepak-removebg-preview.png'
   },
   {
     name: 'Dr. Viviek Pathak',
     degrees: 'MBBS, MS (ENT)',
     specialty: 'ENT Surgeon',
-    role: 'Senior Surgeon',
     img: 'https://thehopehospital.org/wp-content/uploads/2024/09/Dr_Vivek_Pathak-removebg-preview.png'
   },
 ];
@@ -72,9 +64,10 @@ const Doctors = () => {
           subtitle="Meet The Team"
         />
 
-        <Grid container spacing={{ xs: 2, sm: 3, md: 4 }}>
+        <Grid container spacing={3} alignItems="stretch"> 
+          {/* alignItems="stretch" ensures all grid items are same height */}
           {doctors.map((doc, index) => (
-            <Grid item xs={6} sm={6} md={4} lg={3} key={index} sx={{ display: 'flex' }}>
+            <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
               <Card
                 sx={{
                   height: '100%',
@@ -84,6 +77,7 @@ const Doctors = () => {
                   overflow: 'hidden',
                   border: '1px solid',
                   borderColor: 'divider',
+                  boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
                   transition: 'all 0.3s ease',
                   '&:hover': {
                     borderColor: 'primary.main',
@@ -92,40 +86,54 @@ const Doctors = () => {
                   }
                 }}
               >
-                {/* Doctor Image */}
+                {/* Green Header Background for Image */}
                 <Box
                   sx={{
+                    bgcolor: 'primary.main',
+                    height: 100,
+                    width: '100%',
                     position: 'relative',
-                    bgcolor: 'primary.light',
-                    pt: 2,
-                    display: 'flex',
-                    justifyContent: 'center',
+                    mb: 5 // Space for the half-overlapping image
                   }}
                 >
-                  <CardMedia
-                    component="img"
-                    image={doc.img}
-                    alt={doc.name}
+                  <Box
                     sx={{
-                      width: { xs: 80, sm: 100, md: 110 },
-                      height: { xs: 80, sm: 100, md: 110 },
+                      position: 'absolute',
+                      bottom: -40,
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      width: 100,
+                      height: 100,
                       borderRadius: '50%',
                       border: '4px solid white',
-                      boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-                      objectFit: 'cover',
-                      bgcolor: 'grey.100'
+                      bgcolor: 'white',
+                      overflow: 'hidden',
+                      boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
                     }}
-                  />
+                  >
+                    <CardMedia
+                      component="img"
+                      image={doc.img}
+                      alt={doc.name}
+                      sx={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        objectPosition: 'top'
+                      }}
+                    />
+                  </Box>
                 </Box>
 
-                <CardContent sx={{ flexGrow: 1, textAlign: 'center', p: { xs: 1.5, sm: 2 } }}>
+                <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', p: 2 }}>
                   <Typography
-                    variant="subtitle1"
+                    variant="h6"
                     component="div"
+                    align="center"
                     sx={{
                       fontWeight: 700,
                       color: 'primary.dark',
-                      fontSize: { xs: '0.9rem', sm: '1rem' },
+                      fontSize: '1.05rem',
                       lineHeight: 1.3,
                       mb: 0.5
                     }}
@@ -134,9 +142,9 @@ const Doctors = () => {
                   </Typography>
 
                   <Typography
-                    variant="caption"
-                    display="block"
-                    sx={{ color: 'text.secondary', mb: 1, fontWeight: 500 }}
+                    variant="body2"
+                    align="center"
+                    sx={{ color: 'text.secondary', mb: 1.5, fontWeight: 500 }}
                   >
                     {doc.degrees}
                   </Typography>
@@ -148,22 +156,23 @@ const Doctors = () => {
                       bgcolor: 'secondary.light',
                       color: 'primary.dark',
                       fontWeight: 600,
-                      fontSize: { xs: '0.65rem', sm: '0.7rem' },
-                      height: 'auto',
-                      py: 0.5,
-                      mb: 1.5
+                      fontSize: '0.75rem',
+                      mb: 2
                     }}
                   />
+                  
+                  {/* Spacer to push button to bottom */}
+                  <Box sx={{ flexGrow: 1 }} />
 
                   <Button
                     variant="outlined"
                     color="primary"
-                    size="small"
                     fullWidth
                     sx={{
-                      fontSize: { xs: '0.7rem', sm: '0.75rem' },
-                      py: { xs: 0.5, sm: 0.75 },
+                      mt: 1,
                       borderRadius: 2,
+                      textTransform: 'none',
+                      fontWeight: 600
                     }}
                   >
                     Book Appointment

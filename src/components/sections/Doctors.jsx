@@ -64,7 +64,11 @@ const Doctors = () => {
           subtitle="Meet The Team"
         />
 
-        <Grid container spacing={3} alignItems="stretch"> 
+        <Grid container spacing={3} alignItems="stretch" sx={{
+                  mx: 'auto',
+                  display: 'flex',
+                  justifyContent: 'center'
+                }}> 
           {/* alignItems="stretch" ensures all grid items are same height */}
           {doctors.map((doc, index) => (
             <Grid item xs={12} sm={6} md={4} lg={3} key={index}>

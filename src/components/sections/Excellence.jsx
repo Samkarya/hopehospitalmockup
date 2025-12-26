@@ -30,7 +30,11 @@ const Excellence = () => {
           subtitle="Comprehensive Care"
         />
 
-        <Grid container spacing={{ xs: 2, sm: 3 }} alignItems="stretch">
+        <Grid container spacing={{ xs: 2, sm: 3 }} alignItems="stretch" sx={{
+                  mx: 'auto',
+                  display: 'flex',
+                  justifyContent: 'space-around'
+                }}>
           {specialties.map((item, index) => (
             <Grid item xs={6} sm={6} md={3} key={index}>
               <Paper
@@ -39,9 +43,11 @@ const Excellence = () => {
                   p: 3,
                   textAlign: 'center',
                   border: '1px solid',
+                  minWidth: 200,
                   borderColor: 'divider',
                   borderRadius: 3,
                   height: '100%', // Forces equal height
+                  width: '100%',
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',

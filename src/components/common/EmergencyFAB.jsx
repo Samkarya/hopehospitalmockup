@@ -4,7 +4,6 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const EmergencyFAB = () => {
   const handleClick = () => {
-    // Standard WhatsApp API link
     window.open('https://wa.me/919667792126?text=Hi,%20I%20would%20like%20to%20book%20an%20appointment', '_blank');
   };
 
@@ -13,24 +12,25 @@ const EmergencyFAB = () => {
       <Tooltip title="Chat on WhatsApp" placement="left" arrow>
         <Fab
           onClick={handleClick}
-          color="success" // WhatsApp Green-ish logic handled by MUI success or custom style
           aria-label="whatsapp"
           sx={{
             position: 'fixed',
-            bottom: 24,
-            right: 24,
-            width: 64,
-            height: 64,
-            bgcolor: '#25D366', // Official WhatsApp Color
+            bottom: { xs: 16, md: 24 },
+            right: { xs: 16, md: 24 },
+            width: { xs: 56, md: 64 },
+            height: { xs: 56, md: 64 },
+            bgcolor: '#25D366',
             color: 'white',
             zIndex: 9999,
             '&:hover': {
               bgcolor: '#1ebc57',
+              transform: 'scale(1.05)',
             },
-            boxShadow: '0px 4px 20px rgba(37, 211, 102, 0.4)'
+            boxShadow: '0px 4px 20px rgba(37, 211, 102, 0.4)',
+            transition: 'all 0.3s ease',
           }}
         >
-          <WhatsAppIcon sx={{ fontSize: 32 }} />
+          <WhatsAppIcon sx={{ fontSize: { xs: 28, md: 32 } }} />
         </Fab>
       </Tooltip>
     </Zoom>

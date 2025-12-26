@@ -1,13 +1,12 @@
 import React from 'react';
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Container, Typography, Chip } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, EffectFade, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import 'swiper/css/effect-fade';
 
 const carouselImages = [
     { src: '/assets/images/heroscroll0.webp', alt: 'Hospital Facility 1' },
@@ -25,29 +24,38 @@ const ImageCarousel = () => {
         <Box
             id="facilities"
             sx={{
-                py: { xs: 4, md: 6 },
+                py: { xs: 5, md: 7 },
                 bgcolor: 'background.subtle',
                 overflow: 'hidden'
             }}
         >
             <Container maxWidth="lg">
-                <Typography
-                    variant="h4"
-                    component="h2"
-                    align="center"
-                    gutterBottom
-                    sx={{ fontWeight: 700, mb: 1 }}
-                >
-                    Our World-Class Facilities
-                </Typography>
-                <Typography
-                    variant="body1"
-                    align="center"
-                    color="text.secondary"
-                    sx={{ mb: 4, maxWidth: 600, mx: 'auto' }}
-                >
-                    Experience state-of-the-art medical infrastructure designed for your comfort and care.
-                </Typography>
+                <Box sx={{ textAlign: 'center', mb: { xs: 3, md: 4 } }}>
+                    <Chip
+                        label="Our Infrastructure"
+                        color="secondary"
+                        size="small"
+                        sx={{ mb: 2, fontWeight: 600 }}
+                    />
+                    <Typography
+                        variant="h4"
+                        component="h2"
+                        sx={{
+                            fontWeight: 700,
+                            mb: 1,
+                            fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' }
+                        }}
+                    >
+                        Our World-Class Facilities
+                    </Typography>
+                    <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        sx={{ maxWidth: 600, mx: 'auto' }}
+                    >
+                        Experience state-of-the-art medical infrastructure designed for your comfort and care.
+                    </Typography>
+                </Box>
             </Container>
 
             {/* Full-width Swiper Carousel */}
@@ -65,18 +73,17 @@ const ImageCarousel = () => {
                     borderRadius: 5
                 },
                 '.swiper-button-next, .swiper-button-prev': {
-                    color: 'primary.main',
-                    bgcolor: 'rgba(255,255,255,0.8)',
-                    width: { xs: 36, md: 48 },
-                    height: { xs: 36, md: 48 },
+                    color: 'white',
+                    bgcolor: 'primary.main',
+                    width: { xs: 36, md: 44 },
+                    height: { xs: 36, md: 44 },
                     borderRadius: '50%',
                     '&::after': {
-                        fontSize: { xs: '16px', md: '20px' },
+                        fontSize: { xs: '14px', md: '16px' },
                         fontWeight: 'bold'
                     },
                     '&:hover': {
-                        bgcolor: 'white',
-                        boxShadow: 3
+                        bgcolor: 'primary.dark',
                     },
                     display: { xs: 'none', sm: 'flex' }
                 }
@@ -94,12 +101,13 @@ const ImageCarousel = () => {
                     pagination={{ clickable: true }}
                     navigation={true}
                     breakpoints={{
+                        480: { slidesPerView: 1.3, spaceBetween: 16 },
                         640: { slidesPerView: 1.5, spaceBetween: 20 },
                         768: { slidesPerView: 2, spaceBetween: 24 },
-                        1024: { slidesPerView: 2.5, spaceBetween: 30 },
+                        1024: { slidesPerView: 2.5, spaceBetween: 28 },
                         1280: { slidesPerView: 3, spaceBetween: 32 },
                     }}
-                    style={{ paddingBottom: '48px' }}
+                    style={{ paddingBottom: '48px', paddingTop: '8px' }}
                 >
                     {carouselImages.map((image, index) => (
                         <SwiperSlide key={index}>
@@ -111,7 +119,7 @@ const ImageCarousel = () => {
                                     boxShadow: 3,
                                     transition: 'transform 0.4s ease, box-shadow 0.4s ease',
                                     '&:hover': {
-                                        transform: 'scale(1.03)',
+                                        transform: 'scale(1.02)',
                                         boxShadow: 6
                                     }
                                 }}
@@ -122,7 +130,7 @@ const ImageCarousel = () => {
                                     alt={image.alt}
                                     sx={{
                                         width: '100%',
-                                        height: { xs: 220, sm: 260, md: 300 },
+                                        height: { xs: 200, sm: 240, md: 280 },
                                         objectFit: 'cover',
                                         display: 'block'
                                     }}
@@ -135,7 +143,7 @@ const ImageCarousel = () => {
                                         left: 0,
                                         right: 0,
                                         height: '40%',
-                                        background: 'linear-gradient(to top, rgba(0,0,0,0.5), transparent)',
+                                        background: 'linear-gradient(to top, rgba(0,0,0,0.4), transparent)',
                                     }}
                                 />
                             </Box>

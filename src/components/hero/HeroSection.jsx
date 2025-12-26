@@ -61,6 +61,7 @@ const HeroSection = () => {
                   fontSize: { xs: '2rem', sm: '2.5rem', md: '3.25rem' },
                   lineHeight: 1.2,
                   fontWeight: 700,
+                  textShadow: '0px 2px 4px rgba(0,0,0,0.3)',
                   mb: 2
                 }}
               >
@@ -139,7 +140,7 @@ const HeroSection = () => {
                 sx={{
                   position: { xs: 'relative', md: 'absolute' },
                   bottom: { md: 40 },
-                  right: { md: -20 },
+                  right: { md: 0, lg: -40 },
                   p: 3,
                   width: { xs: '100%', md: 320 },
                   maxWidth: 350,
